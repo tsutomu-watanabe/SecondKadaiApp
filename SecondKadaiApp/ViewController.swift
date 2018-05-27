@@ -19,7 +19,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet weak var textField: UITextField!
+    
+        var textFieldString = ""
+     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
 
+                textFieldString = textField.text!
+        
+        resultViewController.x = textFieldString
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
 }
 
