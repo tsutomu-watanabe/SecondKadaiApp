@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
         var textFieldString = ""
-     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
